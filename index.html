@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOLDEN DEW — 골든듀 공식 온라인샵 (Renewal)</title>
+  <meta name="description" content="골든듀의 베스트 제품과 신제품을 확인하세요.">
+  <meta property="og:title" content="GOLDEN DEW — 골든듀 공식 온라인샵">
+  <meta property="og:image" content="img/hero/hero-1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script/js.js" defer></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 4V3h6v1M9 13l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#main">본문 바로가기</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="header-in">
+    <a class="logo" href="#top" aria-label="GOLDEN DEW 홈"><img src="img/common/logo.png" alt="GOLDEN DEW" width="150" height="26"></a>
+    <nav class="gnb" id="gnb" aria-label="주요 메뉴">
+      <ul>
+        <li><a href="#product">쥬얼리</a></li>
+        <li><a href="#forever">FOR YOU</a></li>
+        <li><a href="#today">OUTLET</a></li>
+        <li><a href="#look">룩북</a></li>
+        <li><a href="#benefit">이벤트</a></li>
+        <li><a href="#review">커뮤니티</a></li>
+      </ul>
+    </nav>
+    <div class="util">
+      <button type="button" aria-label="로그인"><svg><use href="#i-user"/></svg></button>
+      <button type="button" aria-label="위시리스트"><svg><use href="#i-bag"/></svg><b class="wish-count" id="wishCount" hidden>0</b></button>
+      <button type="button" aria-label="검색"><svg><use href="#i-search"/></svg></button>
+      <a class="pill" href="#benefit">Brand ›</a>
+      <button class="burger" id="burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="gnb"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 메인 비주얼 -->
+  <section class="hero" id="top" aria-roledescription="carousel" aria-label="메인 배너">
+    <div class="hero-imgs" id="heroImgs" aria-hidden="true">
+      <img class="is-on" src="img/hero/hero-1.jpg" alt="" data-shift="16" width="1920" height="1020">
+      <img src="img/hero/hero-2.jpg" alt="" data-shift="0" width="1920" height="1020">
+      <img src="img/hero/hero-3.jpg" alt="" data-shift="0" width="1920" height="1020">
+    </div>
+    <div class="hero-copy">
+      <span class="tag" id="hTag">BEST GIFT</span>
+      <h1 id="hTitle">Love is Giving</h1>
+      <p id="hDesc">전하는 순간, 비로소 완성되는 마음<br>골든듀의 베스트 기프트 아이템을 만나보세요.</p>
+      <a class="more" href="#product">VIEW MORE <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="hero-ctrl">
+      <button type="button" class="arw prev" aria-label="이전 배너"><svg><use href="#i-arrow"/></svg></button>
+      <button type="button" class="arw next" aria-label="다음 배너"><svg><use href="#i-arrow"/></svg></button>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+    <div class="notice"><b>NOTICE</b><span class="date">2024.02.04</span><a href="#benefit">설 연휴 배송 및 고객센터 운영 안내</a></div>
+  </section>
+
+  <!-- 마키 -->
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>GOLDEN DEW ✦ LOVE IS GIVING ✦ FOREVER LOVE ✦ FONTANA MADONNA ✦ </span><span>GOLDEN DEW ✦ LOVE IS GIVING ✦ FOREVER LOVE ✦ FONTANA MADONNA ✦ </span></div></div>
+
+  <!-- Our Product -->
+  <section class="sec" id="product">
+    <div class="wrap">
+      <header class="sec-head"><h2 class="split">Our Product</h2><p class="rv">골든듀의 베스트 제품과 신제품을 확인하세요</p>
+        <div class="tabs rv" role="tablist" data-target="gProduct"><button role="tab" aria-selected="true" data-k="best">BEST</button><i></i><button role="tab" aria-selected="false" data-k="new">NEW</button></div>
+      </header>
+      <ul class="grid rank" id="gProduct"></ul>
+      <a class="more center rv" href="#today">VIEW MORE <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Category -->
+  <section class="sec" id="category">
+    <div class="wrap">
+      <header class="sec-head"><h2 class="split">Category</h2><p class="rv">카테고리별 상품</p></header>
+      <ul class="cats">
+        <li><a href="#forever"><span class="cat-img"><img src="img/category/pendant.jpg" alt="" loading="lazy" width="900" height="900"></span><b>펜던트/목걸이</b></a></li>
+        <li><a href="#forever"><span class="cat-img"><img src="img/category/earring.jpg" alt="" loading="lazy" width="900" height="900"></span><b>귀걸이</b></a></li>
+        <li><a href="#forever"><span class="cat-img"><img src="img/category/ring.jpg" alt="" loading="lazy" width="900" height="900"></span><b>반지</b></a></li>
+        <li><a href="#forever"><span class="cat-img"><img src="img/category/bracelet.jpg" alt="" loading="lazy" width="900" height="900"></span><b>팔찌</b></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 컬렉션 (폰타나마돈나 외 3) -->
+  <section class="fontana" id="fontana" aria-roledescription="carousel" aria-label="컬렉션">
+    <div class="wrap fo-in">
+      <div class="fo-img"><img id="foImg" src="img/collection/fontana.jpg" alt="폰타나마돈나 컬렉션" width="820" height="920">
+        <div class="fo-ctrl"><button type="button" id="foPrev" aria-label="이전 컬렉션"><svg><use href="#i-arrow"/></svg></button><button type="button" id="foNext" aria-label="다음 컬렉션"><svg><use href="#i-arrow"/></svg></button></div>
+      </div>
+      <div class="fo-copy"><small id="foSub">시선이 머무는 화려함</small><h2 id="foTitle">폰타나마돈나</h2><p id="foDesc">폰타나 마돈나 분수대의 우아한 황금빛 물결을<br>골든듀만의 금속 디테일로 섬세하게 표현한 디자인</p><span class="hash" id="foHash">#황금빛물결 &nbsp; #플라워스터드</span><a class="more big" href="#forever">VIEW MORE <svg><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </section>
+
+  <!-- Forever Love -->
+  <section class="sec" id="forever">
+    <div class="wrap">
+      <header class="sec-head"><h2 class="split">Forever Love</h2><p class="rv">특별한 날, 특별한 순간 마주하는 찬란함, 오랜 시간 함께할 골든듀 다이아몬드</p><a class="more center rv" href="#today">VIEW MORE <svg><use href="#i-arrow"/></svg></a></header>
+      <ul class="rail" id="gLove"></ul>
+      <div class="bar"><i></i></div>
+    </div>
+  </section>
+
+  <!-- 결제 혜택 배너 -->
+  <section class="promo" aria-roledescription="carousel" aria-label="혜택 배너">
+    <div class="promo-bg" id="promoBg"><img class="is-on" src="img/banner/pay.jpg" alt="" width="1840" height="440"><img src="img/banner/gift.jpg" alt="" width="1840" height="440"></div>
+    <div class="wrap promo-in">
+      <div class="promo-copy"><h2 id="pTitle">공식온라인샵<br>결제 혜택</h2><p id="pDesc">골든듀 공식 온라인샵 단독<br>최대 12개월 무이자 할부 혜택</p><a class="more" href="#benefit">VIEW MORE <svg><use href="#i-arrow"/></svg></a></div>
+      <div class="promo-ctrl"><button type="button" id="pPrev" aria-label="이전 배너"><svg><use href="#i-arrow"/></svg></button><button type="button" id="pNext" aria-label="다음 배너"><svg><use href="#i-arrow"/></svg></button></div>
+    </div>
+  </section>
+
+  <!-- Today Best -->
+  <section class="sec" id="today">
+    <div class="wrap">
+      <header class="sec-head"><h2 class="split">Today Best</h2><p class="rv">구매가 많은 인기 상품</p>
+        <div class="tabs sm rv" role="tablist" data-target="gToday"><button role="tab" aria-selected="true" data-k="all">구매가 많은 상품</button><button role="tab" aria-selected="false" data-k="necklace">목걸이</button><button role="tab" aria-selected="false" data-k="earring">귀걸이</button><button role="tab" aria-selected="false" data-k="ring">반지</button><button role="tab" aria-selected="false" data-k="bracelet">팔찌</button></div>
+      </header>
+      <ul class="rail" id="gToday"></ul>
+      <div class="bar"><i></i></div>
+    </div>
+  </section>
+
+  <!-- 룩북 (신규) : 가로 스크롤 -->
+  <section class="look" id="look" aria-label="룩북">
+    <div class="look-head"><p>LOOKBOOK</p><h2>Wrapped in Lavender</h2><span class="look-no" id="lookNo">01 / 06</span></div>
+    <div class="look-track" id="lookTrack">
+      <figure><img src="img/category/earring.jpg" alt="리본 위의 골드 귀걸이" loading="lazy" width="900" height="900"><figcaption>01 · Gold Bloom</figcaption></figure>
+      <figure><img src="img/collection/pearl.jpg" alt="펄 컬렉션" loading="lazy" width="820" height="920"><figcaption>02 · Pearl Garden</figcaption></figure>
+      <figure><img src="img/category/bracelet.jpg" alt="다이아 뱅글" loading="lazy" width="900" height="900"><figcaption>03 · Silver Line</figcaption></figure>
+      <figure><img src="img/collection/honey.jpg" alt="허니컴 컬렉션" loading="lazy" width="820" height="920"><figcaption>04 · Honeycomb</figcaption></figure>
+      <figure><img src="img/category/ring.jpg" alt="3컬러 반지" loading="lazy" width="900" height="900"><figcaption>05 · Three Colors</figcaption></figure>
+      <figure><img src="img/collection/rose.jpg" alt="로즈골드 컬렉션" loading="lazy" width="820" height="920"><figcaption>06 · Rose Dew</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Benefit -->
+  <section class="benefit" id="benefit">
+    <div class="wrap">
+      <header class="sec-head"><h2 class="split">Benefit</h2><p class="rv">골든듀 공식 온라인샵만의 특별한 혜택</p></header>
+      <div class="bn-in rv">
+        <div class="bn-card"><h3 id="bTitle">골든듀<br>온라인 멤버십</h3><p id="bDesc">공식 온라인샵 회원을 위해 준비한<br>특별한 혜택을 확인하세요</p><a class="more" href="#top">VIEW MORE <svg><use href="#i-arrow"/></svg></a>
+          <div class="bn-ctrl"><button type="button" id="bPrev" aria-label="이전"><svg><use href="#i-arrow"/></svg></button><button type="button" id="bNext" aria-label="다음"><svg><use href="#i-arrow"/></svg></button></div></div>
+        <div class="bn-img" id="bImgs"><img class="is-on" src="img/benefit/membership.jpg" alt="골든듀 멤버십" width="640" height="520"><img src="img/benefit/review.jpg" alt="구매 후기 혜택" width="640" height="520"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 고객 후기 (신규) -->
+  <section class="sec review" id="review">
+    <div class="wrap">
+      <header class="sec-head"><h2 class="split">Real Review</h2><p class="rv">골든듀와 함께한 순간들</p></header>
+      <ul class="rv-grid" id="rvGrid">
+        <li><img src="img/review/review-3.jpg" alt="목걸이를 착용한 고객 후기 사진" loading="lazy" width="700" height="933"><p>"선물 받은 날부터 매일 하고 다녀요. 은은하게 빛나는 게 정말 예뻐요."</p><small>★★★★★ · 펜던트 구매 고객</small></li>
+        <li><img src="img/review/review-2.jpg" alt="골든듀 파우치와 귀걸이 후기 사진" loading="lazy" width="700" height="933"><p>"포장까지 고급스러워서 선물하기 좋았어요."</p><small>★★★★★ · 귀걸이 구매 고객</small></li>
+        <li><img src="img/review/review-4.jpg" alt="귀걸이 케이스 후기 사진" loading="lazy" width="700" height="700"><p>"보랏빛 케이스가 설렘을 더해줘요."</p><small>★★★★★ · 귀걸이 구매 고객</small></li>
+        <li><img src="img/review/review-1.jpg" alt="포장된 귀걸이 후기 사진" loading="lazy" width="700" height="933"><p>"작지만 존재감이 있어서 데일리로 딱이에요."</p><small>★★★★☆ · 귀걸이 구매 고객</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 서비스 -->
+  <section class="service">
+    <ul class="wrap">
+      <li class="rv"><img src="img/service/pay.png" alt="공식온라인샵 단독 결제 혜택" loading="lazy" width="300" height="160"></li>
+      <li class="rv"><img src="img/service/pack.png" alt="안심 패킹 서비스" loading="lazy" width="300" height="160"></li>
+      <li class="rv"><img src="img/service/delivery.jpg" alt="무료 배송 및 반품 서비스" loading="lazy" width="300" height="160"></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-top">
+      <img src="img/common/logo.png" alt="GOLDEN DEW" width="150" height="26">
+      <div class="sns"><a href="#top" aria-label="유튜브"><img src="img/common/sns3.png" alt="" width="24" height="24"></a><a href="#top" aria-label="인스타그램"><img src="img/common/sns2.png" alt="" width="24" height="24"></a><a href="#top" aria-label="페이스북"><img src="img/common/sns1.png" alt="" width="24" height="24"></a></div>
+    </div>
+    <div class="ft-main">
+      <div class="ft-info">
+        <p>상호. (주)골든듀 <span>CEO. 이일성</span> <span>사업자등록번호. 2148188356 [사업자확인인] [구매안전서비스 이용확인인]</span></p>
+        <p>통신판매업신고번호. 제1996-00026호 <span>개인정보관리책임자. 김주경</span> <span>이메일. goldendew@goldendew.com</span></p>
+        <p>주소. 06712 골든듀, 서울특별시 서초구 남부순환로 2365 (서초동) <span>Hosting by Cafe24</span></p>
+        <p class="tel"><b>주얼라센터 1588-6576</b><i>/</i><span>평일 (토,일,공휴일 휴무) 오전 9시~12시, 오후 1시~6시</span></p>
+        <p class="copy">COPYRIGHT ©2022 골든듀 공식 온라인점. ALL RIGHTS RESERVED.</p>
+      </div>
+      <ul class="ft-links">
+        <li><a href="#top">브랜드</a></li><li><a href="#top">공지사항</a></li>
+        <li><a href="#top">이용약관</a></li><li><a href="#top">자주묻는질문</a></li>
+        <li><a href="#top">개인정보처리방침</a></li><li><a href="#review">구매후기</a></li>
+        <li><a href="#top">이용안내</a></li><li><a href="#top">구매문의</a></li>
+        <li><a href="#top">주얼리센터</a></li><li><a href="#benefit">이벤트</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
